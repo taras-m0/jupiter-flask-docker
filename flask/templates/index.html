@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="container my-3">
+
+    <h2>Определение предпочтительной культуры</h2>
+
+    <div class="col-6 mx-auto">
+        <form method="POST">
+            <div class="mb-3">
+                <label for="nitrogen" class="form-label">Nitrogen</label>
+                <input type="text" class="form-control" id="nitrogen" name="nitrogen" required placeholder="90">
+            </div>
+
+            <div class="mb-3">
+                <label for="phosphorus" class="form-label">phosphorus</label>
+                <input type="text" class="form-control" id="phosphorus" name="phosphorus" required placeholder="42">
+            </div>
+
+            <div class="mb-3">
+                <label for="potassium" class="form-label">potassium</label>
+                <input type="text" class="form-control" id="potassium" name="potassium" required placeholder="43">
+            </div>
+
+            <div class="mb-3">
+                <label for="temperature" class="form-label">temperature</label>
+                <input type="text" class="form-control" id="temperature" name="temperature" required placeholder="20.87974371">
+            </div>
+
+            <div class="mb-3">
+                <label for="humidity" class="form-label">humidity</label>
+                <input type="text" class="form-control" id="humidity" name="humidity" required placeholder="82.00274423">
+            </div>
+
+            <div class="mb-3">
+                <label for="ph" class="form-label">ph</label>
+                <input type="text" class="form-control" id="ph" name="ph" required placeholder="6.502985292">
+            </div>
+
+            <div class="mb-3">
+                <label for="rainfall" class="form-label">rainfall</label>
+                <input type="text" class="form-control" id="rainfall" name="rainfall" required placeholder="202.9355362">
+            </div>
+
+            <button type="submit" class="btn btn-primary">расчитать</button>
+        </form>
+    </div>
+
+    <div class="row">
+        Предпочтительная культура: <b>{{ culture }}</b>
+    </div>
+</div>
+
+{% endblock %}
